@@ -1,21 +1,35 @@
-const express = require('express');
-const routes = require('./routes')
+import express from "express";
+import routes from "./routes";
+import { resolve } from "path";
+import cors from "cors"
+import "./database";
 
+const corsOptions = {
+  origin: "https://celiburguer-interface.vercel.app",
+  Credentials: true
+}
 class App {
   constructor() {
     this.app = express();
-
-    this.mddlewares();
+    this.app.use(cors(corsOptions))
+    this.middlewares();
     this.routes();
   }
-
-  mddlewares() {
+  middlewares() {
     this.app.use(express.json());
-  }
+    this.app.use(
+      "/product-file",
+      express.static(resolve(__dirname, "..", "uploads"))
+    );
 
+    this.app.use(
+      "/category-file",
+      express.static(resolve(__dirname, "..", "uploads"))
+    );
+  }
   routes() {
-    this.app.use(routes)
+    this.app.use(routes);
   }
 }
 
-module.exports = new App().app;
+export default new App().app;
