@@ -5,7 +5,7 @@ import cors from "cors"
 import "./database";
 
 const corsOptions = {
-  origin: "https://celiburguer-interface.vercel.app",
+  origin: "https://code-burguerinterface.vercel.app",
   Credentials: true
 }
 class App {
