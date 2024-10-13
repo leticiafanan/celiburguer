@@ -1,11 +1,11 @@
 import express from "express";
 import routes from "./routes";
 import { resolve } from "path";
-import cors from "cors"
-import "./database";
+import cors from "cors";
+import "./app/database";
 
 const corsOptions = {
-  origin: "https://code-burguerinterface.vercel.app",
+  origin: "https://celiburguer",
   Credentials: true
 }
 class App {

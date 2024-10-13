@@ -1,6 +1,7 @@
+
 import Sequelize from "sequelize";
 import User from "../app/models/User";
-import configDatabase from "../config/database";
+import configDatabase from "../config/databases.js";
 import Product from "../app/models/Product";
 import Category from "../app/models/Category";
 import mongoose from "mongoose";
@@ -23,7 +24,7 @@ class Database {
   }
   mongo() {
     this.mongoConnection = mongoose.connect(
-      "mongodb://mongo:y9TSX5e8dm6q6j9UMDYX@containers-us-west-113.railway.app:6901",
+      "mongodb://localhost:27017/celiburguer",
       {
         useNewUrlParser: true,
         useUnifiedTopology:true,

@@ -6,7 +6,7 @@ import User from "../models/User";
 
 class OrderController {
   async store(req, res) {
-    const schema = yup.object().shape({
+    const schema = yup.object()({
       products: yup
         .array()
         .required()

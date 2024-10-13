@@ -1,6 +1,6 @@
 import Jwt from "jsonwebtoken";
 import * as Yup from "yup";
-import authConfig from "../../config/auth";
+import authConfig from "../config/auth";
 import User from "../models/User";
 
 class SessionController {
@@ -13,7 +13,7 @@ class SessionController {
     const userEmailOrPasswordIncorrect = () => {
       return res
         .status(401)
-        .json({ error: "your password or email is invalid" });
+        .json({ error: "Your password or email is invalid" });
     };
 
     if (!(await schema.isValid(req.body))) {

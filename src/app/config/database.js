@@ -1,6 +1,6 @@
 module.exports = {
   dialect: "postgres",
-  url: "postgresql://postgres:KsWrWtCQjbhn5d06jbCk@containers-us-west-62.railway.app:5624/railway",
+  url: "localhost:3001",
   define: {
     timestamps: true,
     underscored: true,

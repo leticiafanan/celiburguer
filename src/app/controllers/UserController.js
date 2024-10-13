@@ -25,7 +25,7 @@ class UserController {
     })
 
     if (userExists) {
-      return res.status(409).json({error:"esse email ja existe"})
+      return res.status(409).json({error:"Esse email ja existe"})
     }
 
 

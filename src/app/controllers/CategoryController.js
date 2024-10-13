@@ -68,7 +68,7 @@ class CategoryController {
     const category = await Category.findByPk(id)
 
     if (!category) {
-      return res.status(401).json({error: "make sure your category id is correct"})
+      return res.status(401).json({error: "Make sure your category ID is correct"})
     }
 
     let path
